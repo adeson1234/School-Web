@@ -1,0 +1,19 @@
+{
+  "name": "school-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node scripts/server.js",
+  "scripts": {
+    "fuser": "fuser -k 3000/tcp",
+    "start": "node scripts/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.16",
+    "sqlite3": "^5.0.2",
+    "web-push": "^3.4.5"
+  }
+}

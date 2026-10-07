@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/beauty/cssTaskBar.css">
+  <link rel="stylesheet" href="/beauty/cssCyberrunner.css">
+  <title>Cyber Runner Game</title>
+</head>
+<body>
+  <div class="top-menu">
+    <button>HOME</button>
+    <button>SHOPPING</button>
+    <button>CALCULATIONS</button>
+    <button class="active">GAMES</button>
+  </div>
+
+  <h1>Cyber Runner</h1>
+  <p class="instructions">Press <strong>SPACE</strong> or <strong>CLICK / TAP</strong> to Jump</p>
+
+  <div id="game-container">
+    <canvas id="gameCanvas" width="500" height="300"></canvas>
+    <div id="score-board">SCORE: <span id="score">0</span></div>
+    
+    <div id="ui-overlay">
+      <h2 id="overlay-title" style="margin-bottom: 12px; font-size: 1.8rem;">READY?</h2>
+      <p id="final-score" style="margin-bottom: 20px; color: #cbd5e1;" class="hidden"></p>
+      <button id="start-btn" class="btn">START GAME</button>
+    </div>
+  </div>
+
+  <script type="module" src="/scripts/cyberRunner.js"></script>
+
+</body>
+</html>

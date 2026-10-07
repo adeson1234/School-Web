@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+}
+
+.top-menu {
+  background-color: #ffffff;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-menu button {
+  background-color: transparent;
+  border: none;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.top-menu button:hover {
+  color: #0056b3;
+}
+
+.top-menu button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #0056b3;
+  transition: all 0.3s ease;
+}
+
+.top-menu button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.top-menu button.active {
+  color: #0056b3;
+}
+
+.top-menu button.active::after {
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 600px) {
+  .top-menu {
+    flex-direction: column;
+    padding: 9px;
+  }
+  
+  .top-menu button {
+    margin: 5px 0;
+    width: 100%;
+  }
+}

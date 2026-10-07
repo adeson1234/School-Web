@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssTaskBar.css">
+  <link rel="stylesheet" href="/beauty/cssSendOrder.css">
+  <title>BAHRADAR</title>
+</head>
+<body>
+  <div class="top-menu">
+    <button>HOME</button>
+    <button class="active">SHOPPING</button>
+    <button>CALCULATIONS</button>
+    <button>GAMES</button>
+  </div>
+
+  <form autocomplete="off" class="buy-form">
+    <div class="username user-info">Customer</div>
+    <input type="text" name="address" class="address-input address" placeholder="Your Address" required>
+    <input type="tel" name="phone" class="address-input phone" placeholder="Phone Number" required>
+    <div class="totalPrice price-info">$0</div>
+    <button type="submit" class="buy-btn">BUY</button>
+  </form>
+
+  <script type="module" src="/scripts/sendOrder.js"></script>
+</body>
+</html>

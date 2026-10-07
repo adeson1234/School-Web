@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssTaskBar.css">
+  <link rel="stylesheet" href="/beauty/cssRockpaperscissor.css">
+  <title>Rock,Paper,Scissor Game</title>
+</head>
+<body>
+  <div class="top-menu">
+    <button>HOME</button>
+    <button>SHOPPING</button>
+    <button>CALCULATIONS</button>
+    <button class="active">GAMES</button>
+  </div>
+
+  <div class="container">
+    <div class="game-container">
+      <button class="rock" aria-label="Rock">
+        <img src="/images/rock.png" alt="rock" height="40vh">
+      </button>
+      <button class="paper">
+        <img src="/images/paper.png" alt="paper" height="40vh">
+      </button>
+      <button class="scissor">
+        <img src="/images/scissor.png" alt="scissor" height="40vh">
+      </button>
+    </div>
+
+    <div class="style-move">
+      <div class="yourMove"><u>Your Move:</u> none</div>
+      <div class="compMove"><u>Computers Move:</u> none</div>
+    </div>
+
+    <div class="theResult">Pick A Move!!</div>
+
+    <div class="yourScore">
+      <div class="wins">Wins: 0</div>
+      <div class="loses">Loses: 0</div>
+      <div class="draws">Draws: 0</div>
+    </div>
+
+    <div class="buttons">
+      <button class="resetScore">Reset Your Scores</button>
+      <button class="autoGame">Auto Play</button>
+    </div>
+  </div>
+
+  <script type="module" src="/scripts/rockPaperScissor.js"></script>
+</body>
+</html>

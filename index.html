@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="beauty/cssIndex.css">
+  <title>LOG IN</title>
+</head>
+<body id="indexBody">
+  <script>
+    if (sessionStorage.getItem('fromReload') !== 'true') {
+      const randomPage = Math.random();
+
+      sessionStorage.setItem('returnToPage', window.location.href);
+
+      if (randomPage >= 0 && randomPage <= 0.5) {
+        location.href = 'reloadPages/reloadpage1.html';
+      }
+      else if (randomPage > 0.5 && randomPage <= 1) {
+        location.href = 'reloadPages/reloadpage2.html';
+      }
+    } else {
+        sessionStorage.removeItem('fromReload');
+      }
+  </script>
+
+  <div class="rotatingDesign">
+    <div class="userEntery active" id="logIn">
+      <form autocomplete="off">
+        <p>Log in</p>
+        <input name="name" type="text" placeholder="name" class="theLogName empty" required autofocus>
+        <input name="password" type="password" class="empty" placeholder="password" required>
+        <button type="submit" >WELCOME BACK</button>
+        <a onclick="replacingEntry('register')">Don't have an acc?</a>
+      </form>
+    </div>
+
+    <div class="userEntery" id="register">
+      <form autocomplete="off">
+        <p>Register</p>
+        <input name="name" type="text" placeholder="name" class="theRegName empty" required>
+        <input name="email" type="email" placeholder="email" class="empty" required>
+        <input name="password" type="password" placeholder="password" class="empty" required>
+        <button type="submit">CREATE ACCOUNT</button>
+        <a onclick="replacingEntry('logIn')">Already have an acc?</a>
+      </form>
+    </div>
+
+    <div id="rotatingBox"></div>
+  </div>
+
+  <script type="module" src="scripts/index.js"></script>
+</body>
+</html>

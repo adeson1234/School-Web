@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssAdminregister.css">
+  <title>ADMIN REGISTRATION</title>
+</head>
+<body>
+
+  <div class="card">
+    <span class="badge">Restricted Area</span>
+    <h1>Admin Portal</h1>
+    <p class="subtitle">Enter your credentials to register high-level access.</p>
+
+    <form id="adminRegisterForm" autocomplete="off">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input 
+          type="text" 
+          id="fullName" 
+          class="theLogName"
+          name="name" 
+          placeholder="Enter name" 
+          required 
+          autofocus
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Admin Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          class="theLogEmail"
+          name="email" 
+          placeholder="admin@company.com" 
+          required 
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="theLogPass"
+          name="password" 
+          placeholder="••••••••••••" 
+          required 
+        >
+      </div>
+
+      <button type="submit" class="btn">Register Admin</button>
+    </form>
+  </div>
+
+  <script type="module" src="/scripts/adminRegister.js"></script>
+</body>
+</html>

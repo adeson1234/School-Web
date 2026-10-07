@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="../beauty/cssReloadPages.css">
+  <title>LOADING...</title>
+</head>
+<body id="bodyreload">
+  <div id="allr">
+    <div id="r1">
+      <div id="part1a">
+        <div id="cube1"></div>
+        <div id="cube2"></div>
+      </div>
+      <div id="part1b">
+        <div id="cube3"></div>
+        <div id="cube4"></div>
+      </div>
+    </div>
+    <div id="r2">
+      <div id="part2a">
+        <div id="cube5"></div>
+        <div id="cube6"></div>
+        <div id="cube7"></div>
+        <div id="cube8"></div>
+      </div>
+      <div id="part2b">
+        <div id="cube9"></div>
+        <div id="cube10"></div>
+        <div id="cube11"></div>
+        <div id="cube12"></div>
+      </div>
+    </div>
+    <div id="r3">
+      <div id="cube13"></div>
+      <div id="cube14"></div>
+      <div id="cube15"></div>
+      <div id="cube16"></div>
+      <div id="cube17"></div>
+      <div id="cube18"></div>
+      <div id="cube19"></div>
+    </div>
+    <div id="r4">
+      <div id="cube20"></div>
+      <div id="cube21"></div>
+      <div id="cube22"></div>
+      <div id="cube23"></div>
+      <div id="cube24"></div>
+      <div id="cube25"></div>
+    </div>
+    <div id="r5">
+      <div id="cube26"></div>
+      <div id="cube27"></div>
+      <div id="cube28"></div>
+      <div id="cube29"></div>
+    </div>
+    <div id="r6">
+      <div id="cube30"></div>
+      <div id="cube31"></div>
+    </div>
+  </div>
+  <script>
+    const randomTime1 = Math.floor(Math.random() * 1000) + 4500;
+    setTimeout(() => {
+      sessionStorage.setItem('fromReload', 'true');
+
+      const returnUrl = sessionStorage.getItem('returnToPage');
+
+      if (returnUrl) {
+        location.href = returnUrl;
+      } else {
+        window.history.back();
+      }
+    }, randomTime1);
+  </script>
+</body>
+</html>

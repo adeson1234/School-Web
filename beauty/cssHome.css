@@ -1,0 +1,157 @@
+.theTemp {
+  position: fixed;
+  white-space: nowrap;
+  bottom: 25px;
+  left: 85px;
+  font-weight: bold;
+}
+
+.fa-solid.fa-temperature-high {
+  font-size: xx-large;
+  position: fixed;
+  left: 33px;
+  bottom: 28px;
+}
+
+.tempBorder {
+  cursor: default;
+  position: fixed;
+  bottom: 16px;
+  left: 12px;
+  height: 60px;
+  border: 2px solid rgba(143, 141, 141, 0.7);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.theName,
+.theDate {
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theName > div {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theDate > div {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4b5563;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f3f4f6;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.theDate > div::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.text {
+  display: none;
+}
+
+.text.active {
+  display: block;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.7rem;
+  line-height: 1.75;
+  color: #3e3223;
+  width: auto;
+  padding: 2.25rem;
+  margin: 50px 15px;
+}
+
+.color {
+  color: #707213;
+}
+
+.center-form {
+  display: flex; 
+  justify-content: center;
+  align-content: center;
+}
+
+.custom-form {
+  max-width: 380px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.custom-form p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 0 30px 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.custom-form input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.custom-form input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.custom-form button {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-form button:hover {
+  background-color: #1d4ed8;
+}
+
+.custom-form button:active {
+  transform: scale(0.98);
+}
+
+.sent-msg {
+  font-weight: 670;
+  font-size: 1.03rem;
+  color: rgb(8, 58, 8);
+  margin-bottom: 3px;
+}

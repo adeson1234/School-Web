@@ -1,0 +1,138 @@
+#bodyreload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90dvh;
+}
+#div1 ,#div2 ,#div3 ,#div4 {
+    background-color: black;
+    height : 5dvw;
+    width: 4dvw;
+    animation: reload 2s infinite  linear;
+}
+@keyframes reload {
+    from {
+        transform: rotatex(0deg);
+    }  
+    to {
+        transform: rotatex(360deg);
+    }
+}
+#div1 {
+    animation-delay: 0s;
+}
+#div2 {
+    animation-delay: 0.2s;
+}
+#div3 {
+    animation-delay: 0.4s;
+}
+#div4 {
+    animation-delay: 0.6s;
+}
+#alldivs1 {
+    display : flex;
+    gap: 18px;
+}
+#part1a,
+#part1b, 
+#part2a,
+#part2b {
+    display: flex;
+    gap: 2vh;
+}
+#r1 {
+    display: flex;
+    gap: 15vh;
+    opacity: 0;
+    animation: love 2s forwards ease-out, blinking infinite 2s 2.3s ease;
+}
+#r2 {
+    display: flex;
+    gap: 1vh;
+    opacity: 0;
+    animation: love 2s 0.3s forwards ease-out, blinking infinite 2s 2.5s ease;
+}
+#r3 {
+    display: flex;
+    gap: 2vh;
+    opacity: 0;
+    animation: love 2s 0.5s forwards ease-out, blinking infinite 2s 2.7s ease;
+}
+#r4 {
+    display: flex;
+    gap: 2vh;
+    opacity: 0;
+    animation: love 2s 0.7s forwards ease-out, blinking infinite 2s 2.9s ease;
+}
+#r5 {
+    display: flex;
+    gap: 2vh;
+    opacity: 0;
+    animation: love 2s 0.9s forwards ease-out, blinking infinite 2s 3.2s ease;
+}
+#r6 {
+    display: flex;
+    gap: 2vh;
+    opacity: 0;
+    animation: love 2s 1.1s forwards ease-out, blinking infinite 2s 3.5s ease;
+}
+#allr {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    align-items: center;
+}
+@keyframes love {
+    from {
+        opacity: 0.4;
+        transform: translateY(-20vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+@keyframes blinking {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#cube1,
+#cube2,
+#cube3,
+#cube4,
+#cube5,
+#cube6,
+#cube7,
+#cube8,
+#cube9,
+#cube10,
+#cube11,
+#cube12,
+#cube13,
+#cube14,
+#cube15,
+#cube16,
+#cube17,
+#cube18,
+#cube19,
+#cube20,
+#cube21,
+#cube22,
+#cube23,
+#cube24,
+#cube25,
+#cube26,
+#cube27,
+#cube28,
+#cube29,
+#cube30,
+#cube31 {
+    background-color: #bb4530;
+    height: min(4dvw ,40px);
+    width: min(4dvw, 40px);
+}

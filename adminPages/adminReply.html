@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssAdminreply.css">
+  <title>REPLY</title>
+</head>
+<body>
+  <div class="admin-form-container">
+    <form class="admin-reply-form">
+      <header class="reply-header">
+        <div class="user-name">Replying to: <span class="userName">User</span></div>
+        <div class="admin-name">As: <span class="adminName">Admin</span></div>
+      </header>
+  
+      <div class="input-group">
+        <input 
+          type="text" 
+          name="answer" 
+          class="reply-input" 
+          placeholder="Type your response..." 
+          required
+          autofocus
+        >
+        <button type="submit" class="submit-btn">
+          <span>Send</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="/scripts/adminReply.js"></script>
+</body>
+</html>

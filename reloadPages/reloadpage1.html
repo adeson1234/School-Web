@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="../beauty/cssReloadPages.css">
+  <title>LOADING...</title>
+</head>
+<body id="bodyreload">
+  <div id="alldivs1">
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+  </div>
+  <script>
+    const randomTime = Math.floor(Math.random() * 1500) + 1000;
+    setTimeout(() => {
+      sessionStorage.setItem('fromReload', 'true');
+
+      const returnUrl = sessionStorage.getItem('returnToPage');
+
+      if (returnUrl) {
+        location.href = returnUrl;
+      } else {
+        window.history.back();
+      }
+    }, randomTime);
+  </script>
+</body>
+</html>

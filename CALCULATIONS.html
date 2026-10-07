@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="beauty/cssTaskBar.css">
+  <link rel="stylesheet" href="/beauty/cssCalculations.css">
+  <title>BAHRADAR</title>
+</head>
+<body>
+  <div class="top-menu">
+    <button>HOME</button>
+    <button>SHOPPING</button>
+    <button class="active">CALCULATIONS</button>
+    <button>GAMES</button>
+  </div>
+
+  <div class="wrap1">
+    <form id="cal">
+      <input type="text" id="display" readonly>
+      <br><br>
+      <input type="button" value="9" onclick="cal.display.value+='9'">
+      <input type="button" value="8" onclick="cal.display.value+='8'">
+      <input type="button" value="7" onclick="cal.display.value+='7'">
+      <input type="button" value="+" onclick="cal.display.value+='+'">
+      <br>
+      <input type="button" value="6" onclick="cal.display.value+='6'">
+      <input type="button" value="5" onclick="cal.display.value+='5'">
+      <input type="button" value="4" onclick="cal.display.value+='4'">
+      <input type="button" value="-" onclick="cal.display.value+='-'">
+      <br>
+      <input type="button" value="3" onclick="cal.display.value+='3'">
+      <input type="button" value="2" onclick="cal.display.value+='2'">
+      <input type="button" value="1" onclick="cal.display.value+='1'">
+      <input type="button" value="*" onclick="cal.display.value+='*'">
+      <br>
+      <input type="button" value="0" onclick="cal.display.value+='0'">
+      <input type="button" value="." onclick="cal.display.value+='.'">
+      <input type="button" value="/" onclick="cal.display.value+='/'">
+      <input
+        type="button"
+        value="="
+        onclick="cal.display.value =eval(cal.display.value)"
+      >
+      <br>
+      <input
+        type="button"
+        value="DELETE"
+        onclick="cal.display.value =''"
+        id="del"
+      >
+    </form>
+  </div>
+
+  
+  <div class="wrap-converter">
+    <form id="currency-form">
+      <div class="converter-header">
+        <span class="icon">💱</span>
+        <h2>Currency Exchange</h2>
+      </div>
+  
+      <div class="input-field">
+        <label for="amount">AMOUNT</label>
+        <div class="input-wrapper">
+          <span class="currency-symbol">$</span>
+          <input type="number" id="amount" value="0" placeholder="0.00">
+        </div>
+      </div>
+  
+      <div class="exchange-row">
+        <div class="input-field">
+          <label for="from-currency">FROM</label>
+          <select id="from-currency">
+            <option value="USD" selected>USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="IQD">IQD (د.ع)</option>
+          </select>
+        </div>
+  
+        <div class="swap-icon">➔</div>
+  
+        <div class="input-field">
+          <label for="to-currency">TO</label>
+          <select id="to-currency">
+            <option value="IQD" selected>IQD (د.ع)</option>
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="result-card">
+        <span class="result-label">CONVERTED VALUE</span>
+        <span id="converted-result">0 د.ع</span>
+      </div>
+  
+      <button type="button" id="convert-btn">Convert Now</button>
+    </form>
+  </div>
+
+  <script type="module" src="scripts/calculations.js"></script>
+</body>
+</html>

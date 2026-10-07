@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssAdminlogin.css">
+  <title>ADMIN LOG IN</title>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="header">
+      <span class="badge">Restricted Area</span>
+      <h1>Admin Portal</h1>
+    </div>
+
+    <form id="logIn" autocomplete="off">
+      <div class="form-group">
+        <label for="name">Admin Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          class="theLogName"
+          name="name" 
+          placeholder="Enter name"
+          required 
+          autofocus
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="theLogPass"
+          name="password" 
+          placeholder="••••••••••••"
+          required 
+        />
+      </div>
+
+      <button type="submit" class="submit-btn">Log In</button>
+    </form>
+  </div>
+
+
+  <script type="module" src="/scripts/adminLogIn.js"></script>
+</body>
+</html>

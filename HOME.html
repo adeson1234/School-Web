@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="beauty/cssTaskBar.css">
+  <link rel="stylesheet" href="beauty/cssHome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>BAHRADAR</title>
+</head>
+<body>
+  <script>
+    const referrer = document.referrer;
+
+    const cameFromIndex = 
+    referrer.endsWith("/index.html") || 
+    referrer.endsWith(window.location.origin + "/") || 
+    referrer === window.location.origin;
+
+    if (cameFromIndex) {
+      if (sessionStorage.getItem('fromReload') !== 'true') {
+        const randomPage = Math.random();
+
+        sessionStorage.setItem('returnToPage', window.location.href);
+
+        if (randomPage >= 0 && randomPage <= 0.5) {
+          location.href = 'reloadPages/reloadpage1.html';
+        }
+        else if (randomPage > 0.5 && randomPage <= 1) {
+          location.href = 'reloadPages/reloadpage2.html';
+        }
+      } else {
+          sessionStorage.removeItem('fromReload');
+        }
+    }
+  </script>
+
+  <div class="top-menu">
+    <button class="active">HOME</button>
+    <button>SHOPPING</button>
+    <button>CALCULATIONS</button>
+    <button>GAMES</button>
+  </div>
+
+  <div class="theName"></div>
+  <div class="theDate"></div>
+
+  <div class="tempBorder">
+    <i class="fa-solid fa-temperature-high"></i>
+    <div class="theTemp"></div>
+  </div>
+
+  <p class="text" id="morning-text">
+    <u class="color"><i>Morning.</i></u> There’s a rare kind of clarity in the early hours before everything gets busy, 
+    and right now, that space belongs to you. Take a moment to settle in, 
+    grab whatever keeps you moving, and dial into what matters. Skip the distraction, 
+    drop straight into your flow, and trust the process. No chaos, 
+    no static—just pure focus and a clear path forward.
+  </p>
+
+  <p class="text" id="midday-text">
+    <u class="color"><i>Midday check-in.</i></u> This is the pivot point of the day where effort turns into real results. 
+    While everyone else is hitting the midday slump, you’re just getting warmed up. 
+    Clear away the clutter, refine your focus, and step into high gear. You’ve got the layout, the tools, 
+    and the head start—now it's all about smooth execution.
+  </p>
+
+  <p class="text" id="evening-text">
+    <u class="color"><i>Evening rhythm.</i></u> The daylight is gone, leaving a clear, quiet space to build. 
+    Whether you’re putting the final touches on today’s progress or settling in for a focused session, 
+    everything is primed for a smooth, distraction-free environment. Drive it home on your terms.
+  </p>
+
+  <p class="text" id="night-text">
+    <u class="color"><i>Final mission.</i></u> Low light, zero noise. You’re operating on a different frequency while the rest of the world rests up. 
+    This is your window to get it done, not to linger. Dial in, push this last task over the finish line, and close out the night. 
+    Put in the work right now, then shut it down and recharge for tomorrow.
+  </p>
+
+  <div class="center-form">
+    <form class="custom-form">
+      <p>Do you need help?</p>
+      <div class="sent-msg"></div>
+      <input class="help-input" type="text" placeholder="Gotchu bro" autocomplete="off" required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <br><br><br><br>
+
+  <center>
+    <a href="index.html">Click here if you want to log out</a>
+  </center>
+
+  <script type="module" src="scripts/home.js"></script>
+</body>
+</html>

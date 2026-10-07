@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssAdmindashboard.css">
+  <title>ADMIN</title>
+</head>
+<body>
+  <script>
+    if (sessionStorage.getItem('fromReload') !== 'true') {
+      const randomPage = Math.random();
+
+      sessionStorage.setItem('returnToPage', window.location.href);
+
+      if (randomPage >= 0 && randomPage <= 0.5) {
+        location.href = '/reloadPages/reloadpage1.html';
+      }
+      else if (randomPage > 0.5 && randomPage <= 1) {
+        location.href = '/reloadPages/reloadpage2.html';
+      }
+    } else {
+        sessionStorage.removeItem('fromReload');
+      }
+  </script>
+
+  <div class="header">
+    <h1 class="admin-Name">Admin Dashboard</h1>
+    <div id="notif-status">Click here to enable push notifications</div>
+  </div>
+
+  <section>
+    <h2>Registered Admins</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="admins-table">
+        <tr><td colspan="3">Loading admins...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Registered Users</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody id="users-table">
+        <tr><td colspan="4">Loading users...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Help Messages</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Sentence</th>
+          <th>Reply</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="helps-table">
+        <tr><td colspan="5">Loading help messages...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Recent Orders</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Customer Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Cart Items</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody id="orders-table">
+        <tr><td colspan="6">Loading orders...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="midBtn">
+    <button class="addAdmin" onclick="window.location.href = '/adminPages/adminRegister.html'">Click Here To Add An Admin</button>
+  </div>
+
+  <center>
+    <a href="/adminPages/adminLogIn.html">Click here if you want to log out</a>
+  </center>
+  
+  <script type="module" src="/scripts/adminDashboard.js"></script>
+</body>
+</html>

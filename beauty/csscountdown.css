@@ -1,0 +1,28 @@
+body {
+  background-color: #e2af41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  margin: 0;
+}
+
+#block-counter {
+  display: grid;
+  grid-template-columns: repeat(11, 25px); 
+  grid-template-rows: repeat(7, 20px);    
+  gap: 4px;
+}
+
+.block {
+  background-color: #111; 
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(4); 
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+}
+
+.block.active {
+  opacity: 1;
+  transform: scaleX(1);
+}

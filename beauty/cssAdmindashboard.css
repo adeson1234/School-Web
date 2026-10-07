@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+  margin: 0;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 15px 25px;
+  border-radius: 8px;
+}
+
+#notif-status {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #334155;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+section {
+  margin-top: 25px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #334155;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #0f172a;
+  color: #38bdf8;
+}
+
+tr:nth-child(even) {
+  background: #162032;
+}
+
+.cart-box {
+  background: #0284c7;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.answerBtn {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(241, 38, 23);
+  padding: 12px;
+  color:rgb(212, 205, 205) ;
+}
+
+.deleteBtn:active {
+  background-color: rgb(110, 20, 14);
+}
+
+.answerBtn:active {
+  background-color: rgb(67, 158, 128);
+}
+
+.addAdmin {
+  margin-top: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 17px;
+  border: none;
+  border-radius: 20px;
+  background-color: #0284c7;
+}
+
+.addAdmin:active {
+  background-color: #033147;
+}
+
+.midBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

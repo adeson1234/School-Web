@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssAnswer.css">
+  <title>ANSWER</title>
+</head>
+<body>
+  <div class="user-page-container">
+    <div class="chat-card">
+      
+      <div class="admin-response-block">
+        <div class="avatar-badge">A</div>
+        <div class="response-content">
+          <div class="meta-info">
+            <span class="admin-title">Admin</span>
+          </div>
+          <p class="answer-text"></p>
+        </div>
+      </div>
+  
+      <hr class="divider">
+
+      <form class="user-reply-form">
+        <label for="userReply" class="form-label">Your Reply</label>
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="userReply"
+            name="userAnswer" 
+            class="reply-input" 
+            placeholder="Type your reply..." 
+            required
+          >
+          <button type="submit" class="submit-btn">
+            <span>Reply</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </form>
+  
+    </div>
+  </div>
+
+  <script type="module" src="/scripts/answer.js"></script>
+</body>
+</html>

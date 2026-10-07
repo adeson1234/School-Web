@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/beauty/cssVerify.css">
+  <title>VERIFY</title>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Enter Verification Code</h1>
+    <p>We sent a 4-digit code to <strong id="userEmail">your email</strong>.</p>
+
+    <form id="verifyForm">
+      <div class="code-inputs">
+        <input type="text" maxlength="1" pattern="[0-9]" required autofocus>
+        <input type="text" maxlength="1" pattern="[0-9]" required>
+        <input type="text" maxlength="1" pattern="[0-9]" required>
+        <input type="text" maxlength="1" pattern="[0-9]" required>
+      </div>
+
+      <button type="submit" class="btn">Verify & Proceed</button>
+    </form>
+  </div>
+
+  <script type="module" src="/scripts/verify.js"></script>
+</body>
+</html>
